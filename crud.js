@@ -188,7 +188,6 @@ function saveData() {
 function showTask() {
     listContainer.innerHTML=''
     let list = JSON.parse(localStorage.getItem('todoListOfObjects'));
-    console.log('list', list, typeof (list));
 
     list.forEach(todo => {
         li = createLiElement(todo);
