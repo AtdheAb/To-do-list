@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h2>To-Do list <img src="./assets/images/To-do_List.webp" alt=""></h2>
+    <div class="container">
+        <!-- the menu is intended to serve as a filter and navigation, still not started yet -->
+        <!-- <div class="menu">
+            <ul>
+                <li><input type="text" placeholder="search"></li>
+                <li>
+                    <h3><a href="#">Inbox</a></h3>
+                </li>
+                <li>
+                    <h3><a href="today.html">Today</a></h3>
+                </li>
+                <li>
+                    <h3><a href="upcoming.html">Upcoming</a></h3>
+                </li>
+                <li>
+                    <h3><a href="priority.html">Priority</a></h3>
+                </li>
+            </ul>
+        </div> -->
+
+        <div class="todo-app">
+            <div>
+
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add new task">
+                </div>
+                <div class="atributes">
+                    <div class="description" id="description-box">
+                        <textarea name="description" id="description-box-text-area"
+                            placeholder="Description"></textarea>
+                    </div>
+                    <div class="custom-select">
+                        <select id="priority-box">
+                            <option value="Low">Low Priority</option>
+                            <option value="Medium">Medium Priority</option>
+                            <option value="High">High Priority</option>
+                        </select>
+                    </div>
+                    <div class="due-date">
+                        <label for="start">Due date:</label>
+                        <input type="date" id="due-date-box" name="trip-start" value="2024-07-22" min="2024-01-01"
+                            max="202025-12-31" />
+                    </div>
+                </div>
+                <div class="row center-button">
+                    <button onclick="addTask()">Add Todo</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="modal-title" placeholder="Todo Title" />
+                <input type="text" id="modal-todo-id" placeholder="Todo Title" style="display: none;" />
+
+
+                <textarea id="modal-description" placeholder="Some text in the Modal.."></textarea>
+                <p><strong>Due Date:</strong> <input type="date" id="modal-due-date" /></p>
+                <p><strong>Priority:</strong>
+                    <select id="modal-priority">
+                        <option value="Low">Low Priority</option>
+                        <option value="Medium">Medium Priority</option>
+                        <option value="High">High Priority</option>
+                    </select>
+                </p>
+                <button id="save-edit-button" onclick="saveChanges()">Save Edit</button>
+            </div>
+        </div>
+        <ul id="list-container">
+        </ul>
+    </div>
+    </div>
+    <script src="crud.js"></script>
+</body>
+
+</html>
